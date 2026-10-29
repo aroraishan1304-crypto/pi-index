@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#08090c" />
+  <meta name="description" content="Explore where calendar dates first appear in the digits of pi." />
+  <title>π Index — Birthday Explorer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="birthdays.js"></script>
+  <script defer src="pi-digits.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#overview" aria-label="Pi Index home" data-view-link="overview">
+        <span class="brand-mark">π</span>
+        <span class="brand-copy"><strong>PI INDEX</strong><small>DATE POSITION EXPLORER</small></span>
+      </a>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-view="overview" type="button">Overview</button>
+        <button class="nav-item" data-view="calendar" type="button">Calendar</button>
+        <button class="nav-item" data-view="rankings" type="button">Rankings</button>
+        <button class="nav-item" data-view="finder" type="button">Birthday finder</button>
+        <button class="nav-item" data-view="visuals" type="button">Visual explorer</button>
+      </nav>
+      <div class="topbar-status"><span class="status-dot"></span><span>366 DATES INDEXED</span></div>
+    </header>
+
+    <main id="main-content" class="main-content">
+      <div id="view-content"></div>
+    </main>
+    <footer class="app-footer"><span>π INDEX <span class="footer-separator">/</span> A DATE EXPLORATION TOOL</span><span>MMDD · POSITIONS COUNT FROM THE FIRST DECIMAL DIGIT</span></footer>
+    <div id="chart-tooltip" class="chart-tooltip" role="status" aria-live="polite"></div>
+  </div>
+</body>
+</html>
